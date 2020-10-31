@@ -4,14 +4,11 @@ const outputText = document.getElementById("output-screen");
 const equalsButton = document.getElementById("equals-button");
 const clearButton = document.getElementById("clear-button");
 const backspaceButton = document.getElementById("backspace-button");
-
 const tipHideButton = document.getElementById("hide-tip");
 
 let clearOnNextInput = false;
 let ans = 0;
-
 let operators = ['×', '÷', '+', '-', '^', '!'];
-
 let isControlPressed = false;
 
 buttons.forEach((button)=> {
@@ -65,9 +62,10 @@ function calculate() {
 
     try {
         ans = mexp.eval(expression)
+        outputText.textContent = ans;
     }
     catch (err) {
-        ans = "Error";
+        outputText.textContent = "Error";
     }
 
     clearOnNextInput = true;
@@ -79,14 +77,16 @@ function calculate() {
     if (ans === "Infinity" || outputText.textContent === "Too big!") {
         outputText.textContent = "Too big!";
         return; 
-    }
-    
-    outputText.textContent = ans;
-
-    
+    }    
 }
 
 function backspace() {
+
+    if (clearOnNextInput) {
+        outputText.textContent = "";
+        clearOnNextInput = false;
+    }
+
     let charactersToRemove = 1;
 
     if (getLastCharacterOfInput() === "s") {
@@ -167,31 +167,3 @@ function handleKeyUp(event) {
 function hideTip() {
     document.querySelector(".tip").style.visibility = "hidden";
 }
-
-// function highlightButton(button) {
-//     button.style.backgroundColor = lightenDarkenColor(getComputedStyle(button).getPropertyValue("background-color"), -20);
-// }
-
-// function unHighlightButton(button) {
-//     button.style.backgroundColor = lightenDarkenColor(getComputedStyle(button).getPropertyValue("background-color"), 20);
-// }
-
-// function lightenDarkenColor(color, amount) {
-
-//     console.log(color);
-//     let charArray = color.split("")
-
-//     let RGB = color
-//         .substring(charArray.indexOf("(") + 1, charArray.indexOf(")"))
-//         .split(",");
-
-//     let newRGB = [];
-
-//     for (let i = 0; i < 3; i++) {
-//         let value = parseInt(RGB[i]);
-//         newRGB.push((value + amount).toString());
-//     }
-
-//     console.log(`rgb(${newRGB[0]}, ${newRGB[1]}, ${newRGB[2]})`);
-//     return `rgb(${newRGB[0]}, ${newRGB[1]}, ${newRGB[2]})`;
-// }
