@@ -24,6 +24,8 @@ tipHideButton.addEventListener('click', hideTip);
 addEventListener('keydown', handleKeyboardInput);
 addEventListener('keyup', handleKeyUp);
 
+
+
 function appendInput(input) {
     if (clearOnNextInput) {
         clear();
@@ -39,6 +41,7 @@ function appendInput(input) {
     }
 
     inputText.textContent += input;
+    inputText.scrollLeft += 100;
 
     function shouldInsertMultiplication() {
         return (
