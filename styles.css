@@ -1,0 +1,158 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: white;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin: 3rem;
+}
+
+#content {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 17rem;
+    height: auto;
+    font-family: "Roboto Mono", monospace;
+    margin: auto;
+    
+    box-shadow: rgb(223, 223, 223) 0px 5px 10px;
+
+    border-radius: 5px;
+
+    border: solid 1px rgb(219, 219, 219);
+}
+
+#display {
+    width: inherit;
+    background-color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#input-screen {
+    padding: 0rem 0.7rem 0.5rem 0.7rem;
+    height: 1rem;
+    color: rgb(66, 66, 66);
+}
+
+#output-screen {
+    padding: 0 0.7rem;
+    text-align: right;
+    height: 1rem;
+    font-weight: bold;
+    color: rgb(53, 68, 80);
+}
+
+#inputs {
+    width: inherit;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.tip {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+#hide-tip {
+    background-color: rgb(219, 219, 219);
+    border: none;
+    margin: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    color: black;
+    text-align: center;
+}
+
+#hide-tip:hover {
+    background-color: rgb(209, 178, 178);
+}
+
+#hide-tip:focus {
+    outline: none;
+}
+
+.calculator-button {
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    padding: 0.9rem 0;
+    border-radius: 0;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    transition: all 100ms;
+}
+
+.calculator-button:hover {
+    background-color: lightgray;
+}
+
+.calculator-button:focus {
+    outline: none;
+}
+
+.top-row {
+    background-color: rgb(247, 247, 247);
+    border-bottom: solid 1px lightgray;
+    border-top: solid 1px lightgray;
+}
+
+.right-border {
+    border-right: solid 1px lightgray;
+}
+
+.button-operator {
+    background-color: rgb(208, 228, 240);
+}
+
+.button-operator:hover {
+    background-color: rgb(177, 193, 202);
+}
+
+#equals-button {
+    color: white;
+    background-color: rgb(131, 164, 194);
+}
+
+#equals-button:hover {
+    background-color: rgb(77, 99, 117);
+}
+
+.button-clear {
+    color: white;
+    background-color: rgb(0, 35, 36);
+}
+
+.button-clear:hover {
+    background-color: rgb(77, 99, 117);
+}
+
+.button-bottom-left {
+    border-bottom-left-radius: 5px;
+}
+
+.button-bottom-right {
+    border-bottom-right-radius: 5px;
+}
+
+kbd {
+    display: inline-block;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    color: #242729;
+    text-shadow: 0 1px 0 white;
+    background-color: #eeeeee;
+    border: 1px solid #9fa6ad;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(12,13,14,0.15), inset 0 1px 0 0 #fff;
+    overflow-wrap: break-word;
+}

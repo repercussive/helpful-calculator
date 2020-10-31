@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="favicon-32x32.png"/>
+</head>
+<body>
+    
+    <div id="content">
+        <h1>the helpful calculator</h1>
+        <div id="container">
+            
+            <div id="display">
+                <p id="input-screen"></p>
+                <p id="output-screen"></p>
+            </div>
+            <div id="inputs">
+                <button class="calculator-button top-row">(</button>
+                <button class="calculator-button top-row">)</button>
+                <button class="calculator-button top-row">!</button>
+                <button class="calculator-button top-row">√</button>
+                <button class="calculator-button top-row">π</button>
+
+                <button class="calculator-button">7</button>
+                <button class="calculator-button">8</button>
+                <button class="calculator-button right-border">9</button>
+                <button id="backspace-button" class="calculator-button button-clear do-not-append">DEL</button>
+                <button id="clear-button" class="calculator-button button-clear do-not-append"><strong>AC</strong></button>
+    
+                <button id="4" class="calculator-button">4</button>
+                <button class="calculator-button">5</button>
+                <button class="calculator-button right-border">6</button>
+                <button class="calculator-button button-operator">×</button>
+                <button class="calculator-button button-operator">÷</button>
+    
+                <button class="calculator-button">1</button>
+                <button class="calculator-button">2</button>
+                <button class="calculator-button right-border">3</button>
+                <button class="calculator-button button-operator">+</button>
+                <button class="calculator-button button-operator">-</button>
+    
+                <button class="calculator-button button-bottom-left">0</button>
+                <button class="calculator-button">.</button>
+                <button class="calculator-button button-ans right-border">Ans</button>
+                <button class="calculator-button button-operator">^</button>
+                <button id="equals-button" class="calculator-button button-bottom-right do-not-append">=</button>
+            </div>
+        </div>
+
+        <p class="tip"><button id="hide-tip">x</button>tip: when using the keyboard, use <kbd>ctrl</kbd> + <kbd>backspace</kbd> to clear the input.</p>
+    </div>
+    
+
+    
+
+    <script src="math-expression-evaluator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
